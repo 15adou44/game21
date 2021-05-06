@@ -17,6 +17,6 @@ func _physics_process(delta):
 		if Input.is_action_just_pressed("ui_up"):
 			motion.y = -400
 	
-	move_and_slide(motion, UP)
+	motion = move_and_slide(motion, UP)
 	print(motion)
 	pass
