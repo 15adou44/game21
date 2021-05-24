@@ -1,6 +1,6 @@
 [gd_scene load_steps=70 format=2]
 
-[ext_resource path="res://icon.png" type="Texture" id=1]
+[ext_resource path="res://assets/chroma_noir/HerosFix.png" type="Texture" id=1]
 [ext_resource path="res://KinematicBody2D.gd" type="Script" id=2]
 [ext_resource path="res://assets/chroma_noir/Overworld.png" type="Texture" id=3]
 [ext_resource path="res://assets/chroma_noir/Underground.png" type="Texture" id=4]
@@ -678,13 +678,13 @@ points = PoolVector2Array( 0, 0, 8, 0, 8, 8, 0, 8 )
 [sub_resource type="RectangleShape2D" id=58]
 extents = Vector2( 30, 20.0001 )
 
-[sub_resource type="DynamicFont" id=61]
+[sub_resource type="DynamicFont" id=59]
 font_data = ExtResource( 6 )
 
-[sub_resource type="DynamicFont" id=59]
+[sub_resource type="DynamicFont" id=60]
 font_data = ExtResource( 7 )
 
-[sub_resource type="DynamicFont" id=60]
+[sub_resource type="DynamicFont" id=61]
 font_data = ExtResource( 6 )
 
 [node name="World" type="Node"]
@@ -707,13 +707,16 @@ format = 1
 tile_data = PoolIntArray( 65553, 0, 655370, 131091, 0, 262144, 131092, 0, 262145, 131093, 0, 262146, 196628, 0, 327681, 458763, 0, 2, 524297, 0, 65536, 524298, 0, 65537, 524299, 0, 65538, 524300, 0, 65539, 589833, 0, 131072, 589834, 0, 131074, 589835, 0, 131074, 589836, 0, 131075, 655369, 1, 131074, 655370, 1, 131080, 655371, 1, 131079, 655372, 1, 131074 )
 
 [node name="Player" type="KinematicBody2D" parent="."]
-position = Vector2( 18, 74 )
+position = Vector2( 20, 74 )
 scale = Vector2( 0.1, 0.1 )
 collision/safe_margin = 1.0
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="Player"]
+scale = Vector2( 6.6, 6.6 )
 texture = ExtResource( 1 )
+hframes = 2
+vframes = 6
 
 [node name="Heros" type="Sprite" parent="Player/Sprite"]
 visible = false
@@ -731,7 +734,7 @@ margin_top = 4.0
 margin_right = 194.0
 margin_bottom = 18.0
 rect_scale = Vector2( 0.572215, 0.572215 )
-custom_fonts/font = SubResource( 61 )
+custom_fonts/font = SubResource( 59 )
 text = "Use Arrow Keys          To Move"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -743,7 +746,7 @@ margin_top = 1.0
 margin_right = 262.0
 margin_bottom = 36.0
 rect_scale = Vector2( 0.282433, 0.295492 )
-custom_fonts/font = SubResource( 59 )
+custom_fonts/font = SubResource( 60 )
 text = " G
 VFQ"
 __meta__ = {
@@ -751,12 +754,13 @@ __meta__ = {
 }
 
 [node name="1" type="Label" parent="Text"]
+visible = false
 margin_left = 3.0
 margin_top = 116.0
 margin_right = 129.0
 margin_bottom = 130.0
 rect_scale = Vector2( 0.800802, 0.717962 )
-custom_fonts/font = SubResource( 60 )
+custom_fonts/font = SubResource( 61 )
 text = "1. House and Spikes"
 __meta__ = {
 "_edit_use_anchors_": false
