@@ -1,5 +1,4 @@
 extends KinematicBody2D
 
 func _on_Area2D_body_entered(body):
-	if body.get("TYPE") == "Player":
-		get_tree().quit()
+	pass
