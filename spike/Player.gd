@@ -17,11 +17,8 @@ func _physics_process(delta):
 			$Sprite.flip_h = false	
 		else:
 			$Sprite.flip_h = true
-	if motion.y != 0:
-			$Sprite.set_frame(3)
-	if motion.x == 0:
+	else:
 		$AnimationPlayer.play("IdleRight")
-		
 	if is_on_floor():if Input.is_action_just_pressed("ui_up"):
 			motion.y = JUMP_HEIGHT
 		

@@ -1,14 +1,15 @@
-[gd_scene load_steps=62 format=2]
+[gd_scene load_steps=64 format=2]
 
 [ext_resource path="res://Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Spikes.tscn" type="PackedScene" id=2]
-[ext_resource path="res://assets/chroma_noir/Overworld.png" type="Texture" id=3]
-[ext_resource path="res://assets/chroma_noir/Underground.png" type="Texture" id=4]
-[ext_resource path="res://assets/chroma_noir/Buildings.png" type="Texture" id=5]
-[ext_resource path="res://assets/fonts/ikkle/little-conquest.ttf" type="DynamicFontData" id=6]
-[ext_resource path="res://assets/fonts/Enter_Input.ttf" type="DynamicFontData" id=7]
-[ext_resource path="res://assets/chroma_noir/Interactables.png" type="Texture" id=8]
-[ext_resource path="res://assets/chroma_noir/Sky.png" type="Texture" id=9]
+[ext_resource path="res://assets/chroma_noir/Sky.png" type="Texture" id=3]
+[ext_resource path="res://assets/chroma_noir/Overworld.png" type="Texture" id=4]
+[ext_resource path="res://assets/chroma_noir/Underground.png" type="Texture" id=5]
+[ext_resource path="res://assets/chroma_noir/Buildings.png" type="Texture" id=6]
+[ext_resource path="res://assets/chroma_noir/Interactables.png" type="Texture" id=7]
+[ext_resource path="res://WorldComplete.gd" type="Script" id=8]
+[ext_resource path="res://assets/fonts/Enter_Input.ttf" type="DynamicFontData" id=9]
+[ext_resource path="res://assets/fonts/ikkle/little-conquest.ttf" type="DynamicFontData" id=10]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 8, 0, 8, 8, 0, 8 )
@@ -129,7 +130,7 @@ points = PoolVector2Array( 0, 0, 8, 0, 8, 8, 0, 8 )
 
 [sub_resource type="TileSet" id=40]
 0/name = "GreenTiles"
-0/texture = ExtResource( 3 )
+0/texture = ExtResource( 4 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )
 0/region = Rect2( 0, 0, 56, 8 )
@@ -181,7 +182,7 @@ points = PoolVector2Array( 0, 0, 8, 0, 8, 8, 0, 8 )
 } ]
 0/z_index = 0
 1/name = "BrownTile"
-1/texture = ExtResource( 3 )
+1/texture = ExtResource( 4 )
 1/tex_offset = Vector2( 0, 0 )
 1/modulate = Color( 1, 1, 1, 1 )
 1/region = Rect2( 0, 64, 56, 8 )
@@ -233,7 +234,7 @@ points = PoolVector2Array( 0, 0, 8, 0, 8, 8, 0, 8 )
 } ]
 1/z_index = 0
 2/name = "Supports"
-2/texture = ExtResource( 4 )
+2/texture = ExtResource( 5 )
 2/tex_offset = Vector2( 0, 0 )
 2/modulate = Color( 1, 1, 1, 1 )
 2/region = Rect2( 24, 80, 40, 32 )
@@ -303,7 +304,7 @@ points = PoolVector2Array( 0, 0, 8, 0, 8, 8, 0, 8 )
 } ]
 2/z_index = 0
 3/name = "Overworld.png 3"
-3/texture = ExtResource( 3 )
+3/texture = ExtResource( 4 )
 3/tex_offset = Vector2( 0, 0 )
 3/modulate = Color( 1, 1, 1, 1 )
 3/region = Rect2( 0, 16, 136, 40 )
@@ -324,7 +325,7 @@ points = PoolVector2Array( 0, 0, 8, 0, 8, 8, 0, 8 )
 3/shapes = [  ]
 3/z_index = 0
 6/name = "Underground.png 6"
-6/texture = ExtResource( 4 )
+6/texture = ExtResource( 5 )
 6/tex_offset = Vector2( 0, 0 )
 6/modulate = Color( 1, 1, 1, 1 )
 6/region = Rect2( 24, 120, 40, 40 )
@@ -472,7 +473,7 @@ points = PoolVector2Array( 0, 0, 8, 0, 8, 8, 0, 8 )
 } ]
 6/z_index = 0
 7/name = "Interactables.png 7"
-7/texture = ExtResource( 8 )
+7/texture = ExtResource( 7 )
 7/tex_offset = Vector2( 0, 0 )
 7/modulate = Color( 1, 1, 1, 1 )
 7/region = Rect2( 0, 168, 88, 56 )
@@ -493,7 +494,7 @@ points = PoolVector2Array( 0, 0, 8, 0, 8, 8, 0, 8 )
 7/shapes = [  ]
 7/z_index = 0
 8/name = "Interactables.png 8"
-8/texture = ExtResource( 8 )
+8/texture = ExtResource( 7 )
 8/tex_offset = Vector2( 0, 0 )
 8/modulate = Color( 1, 1, 1, 1 )
 8/region = Rect2( 64, 48, 16, 88 )
@@ -540,7 +541,7 @@ points = PoolVector2Array( 0, 0, 8, 0, 8, 8, 0, 8 )
 
 [sub_resource type="TileSet" id=49]
 0/name = "Buildings.png 0"
-0/texture = ExtResource( 5 )
+0/texture = ExtResource( 6 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )
 0/region = Rect2( 0, 0, 152, 24 )
@@ -610,7 +611,7 @@ points = PoolVector2Array( 0, 0, 8, 0, 8, 8, 0, 8 )
 } ]
 0/z_index = 0
 1/name = "Buildings.png 1"
-1/texture = ExtResource( 5 )
+1/texture = ExtResource( 6 )
 1/tex_offset = Vector2( 0, 0 )
 1/modulate = Color( 1, 1, 1, 1 )
 1/region = Rect2( 0, 32, 152, 32 )
@@ -631,7 +632,7 @@ points = PoolVector2Array( 0, 0, 8, 0, 8, 8, 0, 8 )
 1/shapes = [  ]
 1/z_index = 0
 2/name = "Sky.png 2"
-2/texture = ExtResource( 9 )
+2/texture = ExtResource( 3 )
 2/tex_offset = Vector2( 0, 0 )
 2/modulate = Color( 1, 1, 1, 1 )
 2/region = Rect2( 0, 0, 112, 88 )
@@ -652,7 +653,7 @@ points = PoolVector2Array( 0, 0, 8, 0, 8, 8, 0, 8 )
 2/shapes = [  ]
 2/z_index = 0
 3/name = "Sky.png 3"
-3/texture = ExtResource( 9 )
+3/texture = ExtResource( 3 )
 3/tex_offset = Vector2( 0, 0 )
 3/modulate = Color( 1, 1, 1, 1 )
 3/region = Rect2( 0, 96, 136, 120 )
@@ -673,14 +674,17 @@ points = PoolVector2Array( 0, 0, 8, 0, 8, 8, 0, 8 )
 3/shapes = [  ]
 3/z_index = 0
 
+[sub_resource type="RectangleShape2D" id=53]
+extents = Vector2( 5, 5 )
+
 [sub_resource type="DynamicFont" id=50]
-font_data = ExtResource( 6 )
+font_data = ExtResource( 10 )
 
 [sub_resource type="DynamicFont" id=51]
-font_data = ExtResource( 7 )
+font_data = ExtResource( 9 )
 
 [sub_resource type="DynamicFont" id=52]
-font_data = ExtResource( 6 )
+font_data = ExtResource( 10 )
 
 [node name="Screen1" type="Node"]
 
@@ -719,6 +723,15 @@ tile_data = PoolIntArray( 65553, 0, 655370, 131078, 2, 393223, 131079, 2, 393224
 __meta__ = {
 "_edit_lock_": true
 }
+
+[node name="WorldComplete" type="Node" parent="."]
+
+[node name="Area2D" type="Area2D" parent="WorldComplete"]
+script = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WorldComplete/Area2D"]
+position = Vector2( 184, 83 )
+shape = SubResource( 53 )
 
 [node name="Text" type="Node" parent="."]
 
