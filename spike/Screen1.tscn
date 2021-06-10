@@ -674,16 +674,16 @@ points = PoolVector2Array( 0, 0, 8, 0, 8, 8, 0, 8 )
 3/shapes = [  ]
 3/z_index = 0
 
-[sub_resource type="RectangleShape2D" id=53]
-extents = Vector2( 5, 5 )
-
-[sub_resource type="DynamicFont" id=50]
-font_data = ExtResource( 10 )
+[sub_resource type="RectangleShape2D" id=50]
+extents = Vector2( 2, 20 )
 
 [sub_resource type="DynamicFont" id=51]
-font_data = ExtResource( 9 )
+font_data = ExtResource( 10 )
 
 [sub_resource type="DynamicFont" id=52]
+font_data = ExtResource( 9 )
+
+[sub_resource type="DynamicFont" id=53]
 font_data = ExtResource( 10 )
 
 [node name="Screen1" type="Node"]
@@ -708,7 +708,7 @@ position = Vector2( 0, -25 )
 tile_set = SubResource( 40 )
 cell_size = Vector2( 8, 8 )
 format = 1
-tile_data = PoolIntArray( 589835, 4, 2, 655369, 4, 65536, 655370, 4, 65537, 655371, 4, 65538, 655372, 4, 65539, 720896, 1, 3, 720905, 4, 131072, 720906, 4, 131073, 720907, 4, 131073, 720908, 4, 131075, 786432, 6, 65540, 786441, 5, 65538, 786442, 536870917, 65543, 786443, 5, 65544, 786444, 536870917, 65538, 786454, 8, 0, 786455, 8, 1, 851968, 6, 65540, 851974, 536870915, 65541, 851976, 1, 5, 851977, 1, 0, 851978, 1, 0, 851979, 1, 0, 851980, 1, 0, 851981, 1, 3, 851990, 8, 65536, 851991, 8, 65537, 917504, 6, 65540, 917505, 1, 0, 917506, 1, 0, 917507, 1, 0, 917508, 1, 0, 917509, 1, 0, 917510, 1, 0, 917511, 1, 0, 917512, 6, 65539, 917517, 6, 65540, 917518, 1, 0, 917519, 1, 0, 917520, 1, 0, 917521, 1, 0, 917522, 1, 6, 917525, 1, 5, 917526, 1, 0, 917527, 1, 0, 983058, 6, 65540, 983061, 6, 65539, 1048594, 6, 65540, 1048597, 6, 65539 )
+tile_data = PoolIntArray( 589835, 4, 2, 655369, 4, 65536, 655370, 4, 65537, 655371, 4, 65538, 655372, 4, 65539, 720896, 1, 3, 720905, 4, 131072, 720906, 4, 131073, 720907, 4, 131073, 720908, 4, 131075, 786432, 6, 65540, 786441, 5, 65538, 786442, 536870917, 65543, 786443, 5, 65544, 786444, 536870917, 65538, 851968, 6, 65540, 851974, 536870915, 65541, 851976, 1, 5, 851977, 1, 0, 851978, 1, 0, 851979, 1, 0, 851980, 1, 0, 851981, 1, 3, 917504, 6, 65540, 917505, 1, 0, 917506, 1, 0, 917507, 1, 0, 917508, 1, 0, 917509, 1, 0, 917510, 1, 0, 917511, 1, 0, 917512, 6, 65539, 917517, 6, 65540, 917518, 1, 0, 917519, 1, 0, 917520, 1, 0, 917521, 1, 0, 917522, 1, 6, 917525, 1, 5, 917526, 1, 0, 917527, 1, 0, 983058, 6, 65540, 983061, 6, 65539, 1048594, 6, 65540, 1048597, 6, 65539 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -730,8 +730,8 @@ __meta__ = {
 script = ExtResource( 8 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WorldComplete/Area2D"]
-position = Vector2( 184, 83 )
-shape = SubResource( 53 )
+position = Vector2( 190, 67 )
+shape = SubResource( 50 )
 
 [node name="Text" type="Node" parent="."]
 
@@ -742,7 +742,7 @@ margin_top = 4.0
 margin_right = 194.0
 margin_bottom = 18.0
 rect_scale = Vector2( 0.572215, 0.572215 )
-custom_fonts/font = SubResource( 50 )
+custom_fonts/font = SubResource( 51 )
 text = "Use Arrow Keys          To Move"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -755,7 +755,7 @@ margin_top = 1.0
 margin_right = 262.0
 margin_bottom = 36.0
 rect_scale = Vector2( 0.282433, 0.295492 )
-custom_fonts/font = SubResource( 51 )
+custom_fonts/font = SubResource( 52 )
 text = " G
 VFQ"
 __meta__ = {
@@ -769,7 +769,7 @@ margin_top = 116.0
 margin_right = 129.0
 margin_bottom = 130.0
 rect_scale = Vector2( 0.800802, 0.717962 )
-custom_fonts/font = SubResource( 52 )
+custom_fonts/font = SubResource( 53 )
 text = "1. House and Spikes"
 __meta__ = {
 "_edit_use_anchors_": false
