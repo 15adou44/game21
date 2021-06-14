@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Buildings.png-612717b30b52a9c7ad3f35d370417475.stex"
+path="res://.import/Buildings.png-e1587171b0d0f4cbfb6e1ea4aec8eb13.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/chroma_noir/Buildings.png"
-dest_files=[ "res://.import/Buildings.png-612717b30b52a9c7ad3f35d370417475.stex" ]
+source_file="res://assets/Buildings.png"
+dest_files=[ "res://.import/Buildings.png-e1587171b0d0f4cbfb6e1ea4aec8eb13.stex" ]
 
 [params]
 
