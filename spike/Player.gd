@@ -9,6 +9,7 @@ var motion = Vector2()
 
 func _physics_process(delta):
 	motion.y += GRAVITY
+	motion.y = clamp(motion.y,-200, 200)
 	motion.x = Input.get_action_strength("ui_right")- Input.get_action_strength("ui_left")
 	motion.x *= SPEED
 	if motion.x != 0:
