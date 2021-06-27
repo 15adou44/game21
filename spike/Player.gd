@@ -23,7 +23,17 @@ func _physics_process(delta):
 	if is_on_floor():if Input.is_action_just_pressed("ui_up"):
 			motion.y = JUMP_HEIGHT
 		
+#dash
+var dashDirection = Vector2(1, 0)
+var canDash = false
+var dashing = false
 
+func dash():
+	if is_on_floor():
+		canDash = true
+	
+	if Input.is_action_pressed("ui_right"):
+		
 		
 		#if Input.is_action_pressed("ui_down"):
 			#$Sprite.set_frame(11)
