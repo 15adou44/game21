@@ -881,7 +881,7 @@ font_data = ExtResource( 9 )
 [node name="World" type="Node"]
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 65, -134 )
+position = Vector2( 52.9384, 43.1141 )
 z_index = 1
 
 [node name="Camera2D" type="Camera2D" parent="."]
