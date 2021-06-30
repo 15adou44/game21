@@ -37,7 +37,8 @@ func dash():
 		canDash = true
 	
 	if Input.is_action_pressed("ui_right"):
-		pass
+		dashDirection = Vector(1, 0)
+	if Input.
 		
 		
 		#if Input.is_action_pressed("ui_down"):
