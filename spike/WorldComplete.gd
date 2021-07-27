@@ -7,3 +7,6 @@ func _physics_process(delta):
 		if body.name == "Player":
 			pass
 			#get.tree().change_scene(Screen2.tscn)
+			
+			
+			

@@ -1,1 +1,2 @@
-$AnimationPlayer.play("flash")
+#extends KinematicBody2D
+#$AnimationPlayer.play("flash")

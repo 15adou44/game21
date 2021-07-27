@@ -8,6 +8,8 @@ const JUMP_HEIGHT = -115
 var motion = Vector2()
 
 func _physics_process(delta):
+	dash()
+	
 	motion.y += GRAVITY
 	motion.y = clamp(motion.y,-200, 200)
 	motion.x = Input.get_action_strength("ui_right")- Input.get_action_strength("ui_left")
@@ -26,6 +28,8 @@ func _physics_process(delta):
 	motion = move_and_slide(motion, UP)
 	#print(motion)
 	pass
+	
+	
 
 #dash
 var dashDirection = Vector2(1, 0)
@@ -37,9 +41,16 @@ func dash():
 		canDash = true
 	
 	if Input.is_action_pressed("ui_right"):
-		dashDirection = Vector(1, 0)
-	if Input.
-		
+		dashDirection = Vector2(1, 0)
+	if Input.is_action_pressed("ui_left"):
+		 dashDirection = Vector2(-1, 0)
+	
+	if Input.is_action_pressed("ui_dash") and canDash:
+		velocity = dashDirection.normalized() * 2000
+		canDash = false
+		dashing = true
+		yield(get_tree().create_timer(0.2),"timeout")
+		dashing = false
 		
 		#if Input.is_action_pressed("ui_down"):
 			#$Sprite.set_frame(11)
