@@ -46,7 +46,7 @@ func dash():
 		 dashDirection = Vector2(-1, 0)
 	
 	if Input.is_action_pressed("ui_dash") and canDash:
-		velocity = dashDirection.normalized() * 2000
+		motion = dashDirection.normalized() * 2000
 		canDash = false
 		dashing = true
 		yield(get_tree().create_timer(0.2),"timeout")
@@ -56,4 +56,6 @@ func dash():
 			#$Sprite.set_frame(11)
 			#motion.x = 0
 			#motion.y = 0
+			
+#reddit 
 	
