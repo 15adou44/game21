@@ -1,5 +1,8 @@
-extends KinematicBody2D
+extends Node2D
 
-func on_Area2D_body_entered(bodys):
+
+
+
+func _on_Area2D_body_entered(body):
 	if body.is_in_group("Player"):
 		get_tree().reload_current_scene()

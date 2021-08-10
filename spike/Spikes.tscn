@@ -8,7 +8,7 @@
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 8, 4 )
 
-[node name="Spikes" type="Area2D"]
+[node name="Spikes" type="Node2D"]
 position = Vector2( 4, -4 )
 script = ExtResource( 1 )
 
