@@ -45,10 +45,16 @@ func shift_camera():
 		shift_left = false
  
 	if shift_down ==true:
-		position.y+= size_y
+		position.y += size_y
 		current_view_y_down+=size_y
 		current_view_y_up+=size_y
 		shift_down = false
+
+	if shift_up ==true:
+		position.y -= size_y
+		current_view_y_down-=size_y
+		current_view_y_up-=size_y
+		shift_up = false
  
  
  
