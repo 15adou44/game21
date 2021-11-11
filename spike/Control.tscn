@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://assets/fonts/Formal_Future.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Buttons/MenuButton.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Buttons/ExitButton.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Buttons/OptionsButton.tscn" type="PackedScene" id=4]
 [ext_resource path="res://fade_in/FadeIn.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Spikes.tscn" type="PackedScene" id=6]
 [ext_resource path="res://title_screen.gd" type="Script" id=7]
 
 [sub_resource type="DynamicFont" id=1]
@@ -21,6 +22,9 @@ script = ExtResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Spikes" parent="." instance=ExtResource( 6 )]
+position = Vector2( 186, 29 )
 
 [node name="Menu" type="VBoxContainer" parent="."]
 margin_left = 17.0
