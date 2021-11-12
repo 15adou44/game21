@@ -30,7 +30,8 @@ func check_player_pos():
 		shift_down = true
 	if player.position.y < current_view_y_up:
 		shift_up = true
- 
+
+#when player reaches the edge of screen, move the camera one screen size left, right, up or down
 func shift_camera():
 	if shift_right ==true:
 		position.x += size_x
