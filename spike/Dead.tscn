@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://assets/fonts/ikkle/little-conquest.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Dead.gd" type="Script" id=2]
+[ext_resource path="res://Hero_Dies.mp3" type="AudioStream" id=3]
+[ext_resource path="res://hit.mp3" type="AudioStream" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 font_data = ExtResource( 1 )
@@ -53,6 +55,12 @@ text = "menu"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="deadsfx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+
+[node name="hit" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
 
 [connection signal="pressed" from="CenterContainer/VBoxContainer/Button" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/BackButton" to="." method="_on_BackButton_pressed"]

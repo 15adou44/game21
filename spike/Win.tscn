@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://assets/fonts/ikkle/little-conquest.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Win.gd" type="Script" id=2]
+[ext_resource path="res://win.mp3" type="AudioStream" id=3]
 
 [sub_resource type="DynamicFont" id=1]
 font_data = ExtResource( 1 )
@@ -43,5 +44,8 @@ text = "back"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="winna" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
 
 [connection signal="pressed" from="CenterContainer/VBoxContainer/EndGameButton" to="." method="_on_EndGameButton_pressed"]

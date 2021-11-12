@@ -24,6 +24,7 @@ func _physics_process(delta):
 		$AnimationPlayer.play("IdleRight")
 	if is_on_floor():if Input.is_action_just_pressed("ui_up"):
 			motion.y = JUMP_HEIGHT
+			$jump.play()
 	
 	motion = move_and_slide(motion, UP)
 	#print(motion)
